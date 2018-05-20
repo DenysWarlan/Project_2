@@ -4,78 +4,119 @@ body {
 }
 
 nav {
+    position: absolute;
     width: 100%;
+    left: 0;
+    top: 0;
     background-color: transparent;
 }
 
-.logo{
+header{
+    
+}
+.logo {
+    display: -ms-flexbox;
+    display: flex;
+}
+.logo .logo-img{
     width: 100px;
 }
 
 nav .ul-menu li {
-    display:inline-block;
+    display: inline-block;
 }
-
 nav a {
-    display:block;
+    display: block;
     text-decoration: none;
-    padding:20px 30px;
+    padding: 20px 30px;
     text-transform: uppercase;
 }
 
 nav a:hover {
     background: #E65540;
 }
-nav .ul-social{
+
+nav .ul-social {
     display: none;
 }
-nav .ul-social img{
-    width: 30px;
+
+nav .ul-social img {
+    width: 25px;
 }
 
 .menu-trigger {
     position: absolute;
     right: 21px;
-    display:none;
-    top: 23px;
-    width: 30px;
-}
-.menu-trigger .open{
     display: none;
+    top: 23px;
+    width: 40px;
 }
-.open-menu .open{
-    display: block;
-}
-.open-menu .close{
+
+.menu-trigger .open {
     display: none;
 }
 
-@media screen and (max-width:768px) {
-    .menu-trigger {
-        display:block;
+.open-menu .open {
+    display: block;
+}
+
+.open-menu .close {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        height: 65px;
+        -ms-flex-pack: center;
+            justify-content: center;
     }
-    nav{
+
+    .menu-trigger {
+        display: block;
+    }
+    .menu-trigger img{
+        width: 30px;
+    }
+
+    nav {
         height: 100vh;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-direction: column;
-            flex-direction: column;
+        flex-direction: column;
         -ms-flex-pack: distribute;
-            justify-content: space-around;
+        justify-content: space-around;
     }
+
     nav ul li {
-        display:block;
+        display: block;
     }
+
     nav ul {
-        display:none;
+        display: none;
         -ms-flex-pack: distribute;
-            justify-content: space-around;
+        justify-content: space-around;
         -ms-flex-align: center;
-            align-items: center;
+        align-items: center;
         padding: 0;
     }
-    nav .ul-menu{
+
+    nav .ul-menu {
         -ms-flex-direction: column;
-            flex-direction: column;
+        flex-direction: column;
+        height: 50vh;
+        position: relative;
+        top: 26px;
+    }
+    nav .ul-social img{
+        margin-bottom: 3px;
+    }
+    nav .ul-social li:nth-child(1){
+         margin-left: 25px;
+     }
+    nav .ul-social li:nth-child(3){
+        margin-right: 25px;
+        margin-top: -2px;
     }
 }
