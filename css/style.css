@@ -1,5 +1,6 @@
 body {
-    background-color: #F8ECC2;
+    background-color: #001820;
+    color: #ffffff;
     font-family: Raleway, OpenSans, sans-serif;
 }
 
@@ -11,25 +12,39 @@ nav {
     background-color: transparent;
 }
 
-header{
-    
+header {
+
 }
+
 .logo {
     display: -ms-flexbox;
     display: flex;
 }
-.logo .logo-img{
-    width: 100px;
+
+.logo .logo-img {
+    width: 110px;
 }
 
 nav .ul-menu li {
     display: inline-block;
 }
+
+nav .ul-menu button {
+    border: 3px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #ffffff;
+    height: 40px;
+    padding: 5px 0;
+}
+
 nav a {
     display: block;
     text-decoration: none;
     padding: 20px 30px;
     text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 nav a:hover {
@@ -40,8 +55,13 @@ nav .ul-social {
     display: none;
 }
 
+nav .ul-social li {
+    color: #ffffff;
+}
+
 nav .ul-social img {
     width: 25px;
+    color: #ffffff;
 }
 
 .menu-trigger {
@@ -69,24 +89,35 @@ nav .ul-social img {
     .logo {
         height: 65px;
         -ms-flex-pack: center;
-            justify-content: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1000;
+        width: 60%;
+        margin: auto;
+    }
+
+    .logo .logo-img {
+        width: 110px;
     }
 
     .menu-trigger {
         display: block;
     }
-    .menu-trigger img{
+
+    .menu-trigger img {
         width: 30px;
+        margin-left: 10px;
     }
 
     nav {
-        height: 100vh;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
         -ms-flex-pack: distribute;
         justify-content: space-around;
+        z-index: 100;
+        background-color: #001820;
     }
 
     nav ul li {
@@ -109,14 +140,48 @@ nav .ul-social img {
         position: relative;
         top: 26px;
     }
-    nav .ul-social img{
+
+    nav .ul-menu button {
+        width: 65%;
+        margin-bottom: -45px;
+        font-size: 18px;
+    }
+
+    nav .ul-social img {
         margin-bottom: 3px;
     }
-    nav .ul-social li:nth-child(1){
-         margin-left: 25px;
-     }
-    nav .ul-social li:nth-child(3){
+
+    nav .ul-social li:nth-child(1) {
+        margin-left: 25px;
+    }
+
+    nav .ul-social li:nth-child(3) {
         margin-right: 25px;
         margin-top: -2px;
+    }
+
+    section h4 {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        font-weight: 200;
+        width: 65%;
+        margin: 15px auto;
+        line-height: 1.4em;
+        font-size: 1.1em;
+
+    }
+
+    section h4 span {
+        font-weight: 600;
+    }
+
+    section .circle {
+        width: 65px;
+        margin: auto;
+    }
+
+    section .circle img {
+        margin-top: 5px;
     }
 }

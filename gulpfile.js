@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     browserSync = require('browser-sync')
 
-    ;
+;
 
 gulp.task('css', function () {
 
@@ -17,11 +17,11 @@ gulp.task('css', function () {
         .pipe(autoprefixer({
             browsers: ['last 3 versions', "IE 9"],
         }))
-        .pipe( gulp.dest('./css') )
-        .pipe( browserSync.stream());
+        .pipe(gulp.dest('./css'))
+        .pipe(browserSync.stream());
 });
 
-gulp.task('server', function() {
+gulp.task('server', function () {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -29,9 +29,9 @@ gulp.task('server', function() {
     });
 
 });
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch('./css/style.css', ['css']);
-    gulp.watch(['./index.html','./css/style.css', './js/**/*.js'], browserSync.reload);
+    gulp.watch(['./index.html', './css/style.css', './js/**/*.js'], browserSync.reload);
 });
 
 gulp.task('default', ['css', 'server', 'watch']);
