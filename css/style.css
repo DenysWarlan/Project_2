@@ -144,16 +144,18 @@ footer .social {
     justify-content: center;
 }
 
-footer .social .social-items {
+footer .social .social-items a{
 
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
     margin: -5px 17px;
+    text-decoration: none;
+    color: #ffffff;
 }
 
-footer .social .social-items img {
+footer .social .social-items a img {
     margin: 0 12px;
     width: 25px;
 }
@@ -220,7 +222,9 @@ footer .social .social-items img {
     .background {
         background-position: 65%;
     }
-
+    .background::after {
+        background: rgba(0, 0, 0, 0.5);
+    }
 
 
     .logo {
@@ -235,6 +239,7 @@ footer .social .social-items img {
 
     .logo .logo-img {
         width: 110px;
+        margin-top: -6px;
     }
 
     .menu-trigger {
@@ -280,6 +285,7 @@ footer .social .social-items img {
         height: 50vh;
         position: relative;
         top: 26px;
+        margin-left: 0;
     }
 
     nav .ul-menu button {
@@ -299,11 +305,20 @@ footer .social .social-items img {
     nav .ul-social li:nth-child(3) {
         margin-right: 25px;
         margin-top: -2px;
+        width: 30px;
+    }
+
+    nav .ul-social li:nth-child(3)  img{
+        width: 30px;
+    }
+    section {
+        height: auto;
     }
 
     section h4 {
         text-align: center;
         font-weight: 200;
+        color: #ffffff;
         width: 65%;
         margin: 15px auto;
         line-height: 1.4em;
@@ -313,6 +328,11 @@ footer .social .social-items img {
 
     section h4 span {
         font-weight: 600;
+    }
+
+    section .circle{
+        width: 65px;
+        margin: 0;
     }
 
     section .circle img {
@@ -335,12 +355,11 @@ footer .social .social-items img {
         flex-direction: column;
         -ms-flex-pack: distribute;
         justify-content: space-around;
-        padding-left: 10px;
         height: 130px;
         padding-top: 5px;
     }
 
-    footer .social .social-items {
+    footer .social .social-items a{
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
@@ -349,9 +368,16 @@ footer .social .social-items img {
         justify-content: space-around;
         width: 40%;
         margin: auto;
+        margin-top: -20px;
+    }
+    footer .social .social-items a img {
+        width: 15px;
+    }
+    footer .social .googleplus a img{
+        width: 20px;
     }
 
-    footer .social .social-items p {
+    footer .social .social-items a p{
         font-weight: 600;
         font-size: .75em;
 
@@ -382,7 +408,7 @@ footer .social .social-items img {
 
     .background {
         background-position: 66% 35%;
-        background-size: 190%;
+        background-size: 200%;
     }
 
     .logo {
@@ -462,7 +488,7 @@ footer .social .social-items img {
         padding-top: 20px;
     }
 
-    footer .social .social-items {
+    footer .social .social-items a{
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
@@ -470,12 +496,19 @@ footer .social .social-items img {
         margin: 0 20px;
     }
 
-    footer .social .social-items img {
+    footer .social .social-items a img {
         margin: 0 12px;
         width: 20px;
     }
 
-    footer .social .social-items p {
+    footer .social .twitter a img{
+        width: 25px;
+    }
+    footer .social .googleplus a img{
+        width: 30px;
+    }
+
+    footer .social .social-items a p {
         font-size: .8em;
     }
 
@@ -543,6 +576,17 @@ footer .social .social-items img {
         margin-top: 30px;
         font-size: 1.16em;
         padding-left: 35px;
+    }
+
+    footer .social{
+        padding-left: 35px;
+    }
+
+    footer .social .twitter a img{
+        width: 30px;
+    }
+    footer .social .googleplus a img{
+        width: 35px;
     }
     .plus{
         left: 47%;
